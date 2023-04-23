@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/styles/notesstyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="heading">
+            <%= data[0].sem[0].subjects[subjectIndex].units[unitIndex].topics[topicIndex].name %>
+        </h1>
+        <div class="start-typing">
+            <button>Start Typing</button>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <div class="prev-box"></div>
+        <div class="front-box">
+            <p class="given-text">
+                <%= data[0].sem[0].subjects[subjectIndex].units[unitIndex].topics[topicIndex].content %>
+            </p>
+        </div>
+        <div class="next-box"></div>
+    </div>
+
+    <div class="buttons">
+        <button id="prev-btn">...Prev</button>
+        <button id="next-btn">Next...</button>
+    </div>
+    <script src="/scripts/notesscript.js"></script>
+</body>
+
+</html>
